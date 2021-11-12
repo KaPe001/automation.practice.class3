@@ -1,8 +1,8 @@
 public class Employee {
 
-     String firstName;
-     String lastName;
-     int salary;
+    private String firstName;
+    private String lastName;
+    private int salary;
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -20,7 +20,7 @@ public class Employee {
         return firstName;
     }
 
-    public  String getLastName() {
+    public String getLastName() {
         return lastName;
     }
 

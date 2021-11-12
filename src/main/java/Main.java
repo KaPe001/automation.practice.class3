@@ -1,14 +1,15 @@
 import java.util.*;
 
 public class Main {
-    static List<Employee> employeesList = new ArrayList<>();
 
     public static void main(String[] args) {
+        Payroll payroll = new Payroll();
 
         for (int i = 0; i <= 4; i++) {
-            employeesList.add(EmployeeHelper.getEmployeeInfo(i + 1));
+            payroll.addEmployee(EmployeeHelper.getEmployeeFromUser(i + 1));
         }
-        EmployeeHelper.menuOptions(employeesList);
+        MenuHelper.printMenuOptions();
+        new MenuHelper().handleSelectedOptions(payroll);
     }
 }
 
